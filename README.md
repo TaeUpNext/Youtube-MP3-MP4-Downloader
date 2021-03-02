@@ -1,5 +1,7 @@
 # What Is This Program?  
-This is a program that will allow a user to easily download youtube MP3's and MP4s without the need of going to sketchy sites or seeing ads. 
+This is a program has a source code that you can use for terminal as well as a GUI Option. Bot will allow a user to easily download YouTube MP3's and MP4s directly to their computer seamlessly without the need of going to sketchy sites or seeing ads. 
+
+# Instructions
 
 # Python Topics Used
 * Variables
@@ -7,9 +9,15 @@ This is a program that will allow a user to easily download youtube MP3's and MP
 * while loops
 * Try/Exceptions (for error correcting)
 
-# Upcoming Features
+
+# What are the zipped files
+They allow you to run the app without needing to run the actual source code. If you unzip dist you will see the .app file for the program you should just need that. In case that doesn't work unzip the build folder too which holds all the contents that it was built with and it should work then
+
+
+# Future Features
 * GUI Version of the Program
 * Choose the time stamp of the video to download
 * Upload Videos
 * DMG file & .exe File
 * Ability to Choose Quality of Video
+If you have any other ideas comment and let me know!
