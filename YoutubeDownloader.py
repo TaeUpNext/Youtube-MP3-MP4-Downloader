@@ -70,6 +70,8 @@ if downloaderChoice == 1: #Program that runs only if the user wants to download 
       if ytTitle == 2: #Makes the user reinput the url to ensure the right video is being downloaded 
         print("\nYou inputted the wrong URL, please try again...")
         ytTitle = False 
+        
+        
 
 
 
@@ -105,7 +107,7 @@ elif downloaderChoice == 2:
               except SyntaxError: #Catches errors when a user enters nothing or a character that is not recognized 
                 print("\nYou did not type in anything or typed in an incorrect character, please try again...")          
             if ytTitle == 1:
-              stream.download(videoDownloadFolder) #downloads the youtube video and puts it into the folder 
+              stream.download('../desktop') #downloads the youtube video and puts it into the folder 
               x += 1
               titleCorrect = True #ends the loop confirming that the title of the video is the correct one
               break
