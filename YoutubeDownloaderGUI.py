@@ -31,7 +31,7 @@ def browse_button():
 #Function for the MP4 button to make the program start downloading the requested video
 def mp4Download():
   url = urlEntryBox.get()
-  results.delete(0,END)
+  resultsLabel.delete(0,END)
   yt = YouTube(url) # sets the vairable yt to the url the user inputted
   stream = yt.streams.get_highest_resolution()
   stream.download(filename)
@@ -42,7 +42,7 @@ def mp4Download():
 #Function for the MP3 button to make the program start downloading the requested video
 def mp3Download():
   url = urlEntryBox.get()
-  results.delete(0,END)
+  resultsLabel.delete(0,END)
   yt = YouTube(url)
   t = yt.streams.filter(only_audio=True).all()
   t[0].download(filename) #downloads the youtube video audio only however the extension is .mp4
