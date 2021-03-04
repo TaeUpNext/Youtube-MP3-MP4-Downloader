@@ -31,14 +31,18 @@ def browse_button():
 #Function for the MP4 button to make the program start downloading the requested video
 def mp4Download():
   url = urlEntryBox.get()
+  results.delete(0,END)
   yt = YouTube(url) # sets the vairable yt to the url the user inputted
   stream = yt.streams.get_highest_resolution()
   stream.download(filename)
   urlEntryBox.delete(0, END)
+  completedMessage= ("DOWNLOAD FINISHED! Thank you for using this program")
+  results.set(completedMessage)
 
 #Function for the MP3 button to make the program start downloading the requested video
 def mp3Download():
   url = urlEntryBox.get()
+  results.delete(0,END)
   yt = YouTube(url)
   t = yt.streams.filter(only_audio=True).all()
   t[0].download(filename) #downloads the youtube video audio only however the extension is .mp4
@@ -49,6 +53,9 @@ def mp3Download():
     clip = mp.AudioFileClip(full_path).subclip(10,) # disable if do not want any clipping
     clip.write_audiofile(output_path)
     urlEntryBox.delete(0, END)
+    completedMessage= ("Your download has finished! Thank you for using this program")
+    results.set(completedMessage)
+    
 
 
 
@@ -85,13 +92,16 @@ browseBtn.grid(row = 4, rowspan = 2, column = 2, pady = 35, sticky = E)
 
 #MP# Downloader Button
 MP3DownloadBtn = Button(master, font = ('Modak',16, 'bold'), width = 16, height = 2, text = 'MP3', highlightcolor = 'red', bd = 2, relief = 'sunken', command = mp3Download)
-MP3DownloadBtn.grid(row = 7, rowspan = 2, column = 0, columnspan = 2, padx = 15, pady = 35, sticky = E)
+MP3DownloadBtn.grid(row = 7, rowspan = 2, column = 0, columnspan = 2, padx = 40, pady = 35, sticky = E)
 
 
 MP4DownloadBtn = Button(master, command =  mp4Download,  font = ('Modak',16, 'bold'), width = 16, height = 2, text = 'MP4', highlightcolor = 'red', bd = 2, relief = 'sunken')
-MP4DownloadBtn.grid(row = 7, rowspan = 2, column = 1, columnspan = 3, padx = 30, pady = 35, sticky = E)
+MP4DownloadBtn.grid(row = 7, rowspan = 2, column = 1, columnspan = 2, padx = 20, pady = 35, sticky = E)
 
 
+results = StringVar()
+resultsLabel = Entry(master, readonlybackground = 'black', text = results, fg = 'green', justify = 'center', state = 'readonly', width = 75, relief = 'sunken', border = 4, highlightthickness = 0)
+resultsLabel.grid(row = 9, column = 0, columnspan = 7,  padx= 5)
 
 
 master.mainloop()
