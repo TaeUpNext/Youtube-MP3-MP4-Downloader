@@ -81,7 +81,7 @@ destinationFolderBorder = Label(master, width = 26, height = 3, bg = 'red') # Th
 destinationFolderBorder.grid(row = 4, column = 0, sticky = E, pady = 25, padx = 2, rowspan = 2) # places border label on grid
 destinationFolderLbl = Label(master, width = 15, height = 1,text = "Destination", font = ('Modak',25, 'bold'), bg = 'Black', fg = 'red') # label for the destination
 destinationFolderLbl.grid(row = 4, column = 0, sticky = E, pady = 25, padx = 6, rowspan = 2) #places label on grid
-destinationFolder = Label(master, width = 25, font = ('times new roman', 22) ,textvariable = folder_path, background = 'black', justify = 'center', fg = 'white', relief = 'sunken', border = 4, highlightthickness = 0) # A read only entry box for the destination folder 
+destinationFolder = Label(master, width = 40, font = ('times new roman', 14) ,textvariable = folder_path, background = 'black', justify = 'center', fg = 'white', relief = 'sunken', border = 4, highlightthickness = 0) # A read only entry box for the destination folder 
 destinationFolder.grid(row = 4, rowspan = 2, column = 2, pady = 35, sticky = W)
 
 
