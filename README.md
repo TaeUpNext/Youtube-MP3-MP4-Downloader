@@ -2,8 +2,7 @@
 This is a program has a source code that you can use for terminal as well as a GUI Option. Bot will allow a user to easily download YouTube MP3's and MP4s directly to their computer seamlessly without the need of going to sketchy sites or seeing ads. 
 
 # Instructions & Notes
-When Downloading YouTube Audios the program downloads the audio with an mp4(**same as the video extension so be careful**) extension and then converts that mp4 into a mp3. Make sure to delete the mp4 audios of the files you don't want. The default folder the videos and audios will download to is your desktop folder, however in the future I will make updates to make it more user friendly and add better features.
-
+When Downloading YouTube Audios the program downloads the audio with an mp4(**same as the video extension so be careful**) extension and then converts that mp4 into a mp3. Make sure to delete the mp4 audios of the files you don't want.
 
 # Python Topics Used
 * Variables
@@ -21,9 +20,8 @@ They allow you to run the app without needing to run the actual source code. If 
 # Future Features
 * Choose the length of the video to download
 * Upload Videos
-* .exe File
+* .exe File, .app files
 * Ability to Choose Quality of Video
-* Browse Function
 * Website Downloader
 If you have any other ideas comment and let me know!
 
